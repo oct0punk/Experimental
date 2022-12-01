@@ -28,12 +28,13 @@ public class SpiderWalk : MonoBehaviour
         if (target)
             transform.LookAt(target);
 
+        // Move
         Vector3 pos = transform.position;
         pos.y = altitude();
         transform.position = Vector3.Lerp(transform.position, pos, speed);
 
-        for (int i = 0; i < legs.Length; i++)
-        {
+        // Animation
+        for (int i = 0; i < legs.Length; i++) {
             legs[i].Update();
         }
     }
@@ -70,6 +71,7 @@ public struct SpiderLeg
 
     public void Update()
     {
+        // Move the leg
         target.position = Vector3.Lerp(target.position, pos, 20 * Time.deltaTime);
         ray = spider.transform.TransformPoint(rayBegin);
         ray += Vector3.up * 5;
@@ -84,6 +86,7 @@ public struct SpiderLeg
                 Color.green);
 
 
+            // New target position for the leg
             if (Vector3.Distance(target.position, hit.point) > 1.2f)
             {
                 float transformZ = spider.transform.InverseTransformDirection(hit.point - target.position).z;
