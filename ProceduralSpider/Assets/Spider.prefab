@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 3250623181474301133}
   - component: {fileID: 3250623181474301130}
   - component: {fileID: 3250623181474301131}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 1497921102149750473}
   - component: {fileID: 9070351779284380433}
   - component: {fileID: 1058431585014707157}
-  m_Layer: 3
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1783,7 +1783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886848969296278716}
   - component: {fileID: 594228720366370869}
-  m_Layer: 3
+  m_Layer: 2
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}

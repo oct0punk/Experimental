@@ -38,7 +38,7 @@ public class SpiderWalk : MonoBehaviour
         }
     }
 
-    float altitude()
+    float altitude() // Average of all legs
     {
         float average = 0;
         for (int i = 0; i < legs.Length; i++)
@@ -48,6 +48,7 @@ public class SpiderWalk : MonoBehaviour
         average /= legs.Length;
         return average;
     }
+
 
     private void OnDrawGizmos()
     {
@@ -75,7 +76,7 @@ public struct SpiderLeg
 
         Debug.DrawRay(ray, Vector3.down * 20, Color.red);
         RaycastHit hit;
-        if (Physics.Raycast(ray, Vector3.down, out hit, 10, 3))
+        if (Physics.Raycast(ray, Vector3.down, out hit, 10))
         {
             Debug.DrawRay(
                 target.position + Vector3.up * .1f,
